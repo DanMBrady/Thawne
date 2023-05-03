@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useParams } from "react-router-dom"
+import "./Messages.css"
 export const Messages =()=>{
     const [friend,setFriend]=useState({
         name:"joe"
@@ -36,14 +37,20 @@ export const Messages =()=>{
     
     return <article>
         <h1>{friend.name}</h1>
-       
+        <div className="fullMessenger">
+       <div className="messageContainer">
         {
             userMessages.map(message=>{
 
-                return <article key={message.id}>
-                    <section>{message.message}</section>
+                return (message.userId===thawneUserObject.id) ?<article key={message.id}>
+                    <section className="messageS">{message.message}</section>
+                    </article>
+                    : <article key={message.id}>
+                    <section className="messageR">{message.message}</section>
                     </article>
             })
         }
+        </div>
+        </div>
     </article>
 }

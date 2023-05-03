@@ -1,0 +1,29 @@
+.fullMessenger{
+    display: flex;
+    justify-content:center ;
+}
+.messageS{
+    background: rgb(79, 145, 251);
+    color:white;
+    width:30%;
+    margin: 20px;
+    padding: 15px;
+    margin-left: 60%;
+    border-radius: 40px;
+    
+}
+.messageR{
+    background: rgb(204, 203, 203);
+    width:30%;
+    margin: 20px;
+    padding: 15px;
+    margin-left: 7%;
+    border-radius: 40px;
+    color:black
+}
+.messageContainer{
+   
+    display: flex;
+    flex-direction: column;
+    width:60%;
+}
