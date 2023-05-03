@@ -6,7 +6,9 @@ export const NavBar = () => {
 
     return (
         <ul className="navbar">
-           
+            <li >
+                <Link className="navbar__link" to="/messages">Messenger</Link>
+            </li>
             {
                 localStorage.getItem("thawne_user")
                     ? <li className="navbar__item navbar__logout">
