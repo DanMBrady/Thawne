@@ -29,7 +29,7 @@ export const ApplicationViews = () => {
         },
         []
     )
-    const userFriends =friends.filter(friend=> friend.userId===thawneUserObject.id || friend.friendId === thawneUserObject.id)
+    
 	return <>
 		<Routes>
             <Route path="/" element={
@@ -37,7 +37,7 @@ export const ApplicationViews = () => {
                <div className="home">
                 <h1>Messages</h1>
 				{
-                   userFriends.map(friend=>{
+                   friends.map(friend=>{
                         const friendName= users.find(user=> user.id === friend.friendId)
                        return<article key={friend.id}>
                         {
